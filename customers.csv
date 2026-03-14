@@ -1,1 +1,16 @@
-
+customer_id,name,country,business_type,annual_transactions,transaction_avg_eur,is_pep,years_as_client,cash_intensive
+C001,John Smith,United Kingdom,Retail,120,850,False,3,False
+C002,Ivan Petrov,Russia,Cryptocurrency,450,12000,True,1,False
+C003,Maria Garcia,Germany,Import/Export,200,3200,False,5,False
+C004,Ahmed Al-Rashid,Iran,Money Services,890,8500,False,0,True
+C005,Anna Kowalski,Poland,Technology,80,1200,False,4,False
+C006,Li Wei,China,Real Estate,310,45000,False,2,False
+C007,James Brown,United States,Consulting,95,2100,False,7,False
+C008,Olga Ivanova,Latvia,Retail,60,700,False,6,False
+C009,Carlos Mendez,Venezuela,Construction,670,9800,True,1,True
+C010,Sophie Dubois,France,Healthcare,110,1500,False,8,False
+C011,Dmitri Volkov,Belarus,Import/Export,540,7200,False,2,True
+C012,Emma Wilson,Sweden,Technology,75,1800,False,10,False
+C013,Hassan Khalid,Afghanistan,Money Services,990,15000,True,0,True
+C014,Ingrid Larsen,Norway,Finance,130,4200,False,5,False
+C015,Pablo Rodriguez,Panama,Shell Company,780,22000,False,1,True
