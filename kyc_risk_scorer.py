@@ -16,7 +16,7 @@ Risk factors assessed:
 import pandas as pd
 from datetime import datetime
 
-# ── Risk Configuration ────────────────────────────────────────────────────────
+#Risk Configuration 
 
 # Country risk tiers based on FATF and common AML frameworks
 COUNTRY_RISK = {
@@ -56,7 +56,7 @@ RISK_LEVELS = {
 }
 
 
-# ── Scoring Functions ─────────────────────────────────────────────────────────
+# Scoring Functions 
 
 def score_country(country: str) -> int:
     """Returns country risk score (0-100). Unknown countries get medium-high score."""
@@ -156,7 +156,7 @@ def calculate_risk(row: pd.Series) -> dict:
     }
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# Main 
 
 def main():
     print("=" * 60)
@@ -178,7 +178,7 @@ def main():
     # Sort by risk score descending
     df = df.sort_values("composite_score", ascending=False).reset_index(drop=True)
 
-    # ── Print Results ──────────────────────────────────────────────────────────
+    # Print Results 
     print(f"\n{'RANK':<5} {'NAME':<20} {'COUNTRY':<15} {'BUSINESS TYPE':<20} {'SCORE':<8} {'RISK LEVEL'}")
     print("-" * 85)
 
@@ -187,7 +187,7 @@ def main():
         print(f"{_+1:<5} {row['name']:<20} {row['country']:<15} {row['business_type']:<20} "
               f"{row['composite_score']:<8} {row['risk_level']}{pep_flag}")
 
-    # ── Summary Statistics ─────────────────────────────────────────────────────
+    # Summary Statistics 
     print("\n" + "=" * 60)
     print("  RISK DISTRIBUTION SUMMARY")
     print("=" * 60)
@@ -206,7 +206,7 @@ def main():
     print(f"\n  Average risk score       : {df['composite_score'].mean():.1f}")
     print(f"  Customers requiring EDD  : {critical + high} (High + Critical)")
 
-    # ── Export ─────────────────────────────────────────────────────────────────
+    # Export
     output_file = "kyc_risk_report.csv"
     export_cols = ["customer_id", "name", "country", "business_type",
                    "is_pep", "composite_score", "risk_level",
